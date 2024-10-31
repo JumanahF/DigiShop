@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Static Online Shopping System</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="updateCartDisplay(); updateProductList();">
+
+<header>
+    <a href="#" class="logo">DigiShop</a>
+    <nav class="navigation">
+        <a href="#products">Products</a>
+        <a href="#cart">Cart</a>
+        <a href="#admin">Admin</a>
+    </nav>
+    <div id="cartSummary">Items: 0 | Total: 0 SAR</div>
+</header>
+
+<section class="main">
+    <div>
+        <h2>Welcome to DigiShop!</h2>
+        <p>Your one-stop destination for all your beauty needs. At our Makeup Shop, we believe that beauty is for everyone. We are passionate about helping you enhance your natural beauty with our carefully curated selection of high-quality makeup products. Whether you're a makeup novice or a seasoned pro, we have everything you need to create stunning looks for any occasion. Founded by two beauty enthusiasts, Jumanah and Lena, our shop aims to provide you with the best shopping experience. We are dedicated to bringing you the latest trends, timeless classics, and innovative products that cater to every skin tone and type. Explore our collection and find your new favorite products today! Join our beauty community and discover tips, tutorials, and inspiration to help you express yourself through makeup. We're excited to share our love for beauty with you! Browse our products below and add them to your cart.</p>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h2 class="title">Our Products</h2>
+    <div class="content" id="productContent"></div>
+</section>
+
+<section class="cart" id="cart">
+    <h2 class="title">Shopping Cart</h2>
+    <div id="cartDetails">
+        <p>No items in your cart.</p>
+    </div>
+    <button onclick="checkout()">Checkout</button>
+</section>
+
+<section class="admin" id="admin">
+    <h2 class="title">Admin Panel</h2>
+    <form id="adminForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required>
+        <label for="productDescription">Product Description:</label>
+        <input type="text" id="productDescription" required>
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" required>
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" accept="image/*" required>
+        <button type="button" onclick="adminAuthenticate()">Add Product</button>
+    </form>
+    <div id="adminProductList">
+        <h3>Product List</h3>
+        <ul id="productList"></ul>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-title">© 2024 DigiShop | All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
